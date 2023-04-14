@@ -1,6 +1,5 @@
 def make_snippet(string)
     arr = string.split(" ")
-end 
-
-puts make_snippet("I am leaning Ruby.")
-
+    remade_string = arr[0..4]
+    return remade_string.join(" ")
+end
