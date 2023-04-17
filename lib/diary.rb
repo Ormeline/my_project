@@ -13,27 +13,22 @@ class DiaryEntry
     end
   
     def count_words
-      word_array = @contents.split(" ")
-      word_array.count
+      word_array = @contents.split(" ").length
     end
   
     def reading_time(wpm) 
-      word_array = @contents.split(" ")
-      
-      wps = wpm / 60
-      wps = wps * word_array.length
-      wpm = wps / 60.to_f
-      wpm.round(2)
+     return (count_words / wpm.to_f).ceil
     end
   
-    def reading_chunk(wpm, minutes) # `wpm` is an integer representing the number
-                                    # of words the user can read per minute
-                                    # `minutes` is an integer representing the
-                                    # number of minutes the user has to read
-      # Returns a string with a chunk of the contents that the user could read
-      # in the given number of minutes.
-      # If called again, `reading_chunk` should return the next chunk, skipping
-      # what has already been read, until the contents is fully read.
-      # The next call after that it should restart from the beginning.
+    def reading_chunk(wpm, minutes)
+      chunk_size = wpm * minutes
+      chunk_list = words[0, chunk_size]
+      return chunk_list.join(" ")
     end
+    
+    private
+
+    def words
+      return @contents.split(" ")
   end
+end
