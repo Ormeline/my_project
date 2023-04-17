@@ -7,4 +7,4 @@ def appointment_reminder(name, appointment_time)
   end 
   
     puts appointment_reminder("Lola", "2:30pm on Monday")
-    puts appointment_reminder("Alex", nil)
+    puts appointment_reminder("Lola", nil)
