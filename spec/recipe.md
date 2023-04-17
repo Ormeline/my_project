@@ -4,7 +4,7 @@
 # Put or write the user story here. Add any clarifying notes you might have.
 As a user
 So that I can keep track of my appointments
-I want to keep a reminder of my upcoming appointments, taking into consideration the name and appointment time.
+I want to keep a reminder of my upcoming appointments, taking into consideration the name and appointment time 
 
 2. Design the Method Signature
 # Include the name of the method, its parameters, return value, and side effects.
