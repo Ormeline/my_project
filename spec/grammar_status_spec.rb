@@ -48,5 +48,4 @@ RSpec.describe GrammarStats do
       end
     end
   end
-end 
   
