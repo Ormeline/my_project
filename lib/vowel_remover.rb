@@ -3,17 +3,20 @@ class VowelRemover
       @text = text
       @vowels = ["a", "e", "i", "o", "u"]
     end
-  
+    
     def remove_vowels()
       i = 0
       while i < @text.length()
-        #binding.irb
+        
         if @vowels.include? @text[i].downcase
-          @text = @text.slice(0,i) + @text.slice(i+1..-1)
-         # i -= 1
+        @text = @text.slice(0,i) + @text.slice(i+1..-1)
+          i -= 1
+          puts @text
         end
         i += 1
       end
-      return @text
+      
+    return @text
     end
   end
+  
